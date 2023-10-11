@@ -58,7 +58,7 @@ body {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(13, 1fr);
-    padding: 0 30px 0 30px;
+    /* padding: 0 30px 0 30px; */
 }
 
 .main--background {
@@ -186,7 +186,7 @@ body {
     height: 70%;
     display: flex;
     gap: 0.5rem;
-    padding: 0 66px 25px 66px;
+    padding: 10px;
     justify-content: space-between;
 }
 
@@ -340,6 +340,20 @@ body {
 .booking-search{
     background-color: rgba(39, 39, 39, 0.7);
     grid-area: 8/1/-1/-1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
 
+.booking-search__form{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.booking-search__box{
+    width: 80%;
+    
 }
 
