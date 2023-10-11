@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-
+/* #region GLOBAL */
 p{
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.25rem;
@@ -18,7 +18,6 @@ h2{
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.25rem;
     color: rgba(207, 207, 207, 1);
-
 }
 
 a{
@@ -52,21 +51,7 @@ body {
     margin: auto;
 }
 
-.main__main {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    /* padding: 0 30px 0 30px; */
-}
 
-.main--background {
-    background-image: url(../assets/landingbackground.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .main-nav {
     grid-area: 1/1/5;
@@ -75,14 +60,12 @@ body {
     justify-content: center;
     padding: 24px;
     z-index: 1;
-
 }
 
 .main-nav__logo {
     background-image: url(../assets/bonz.ai-logo.png);
     width: 100%;
     height: 25%;
-
 }
 
 .main-nav--logo {
@@ -140,14 +123,33 @@ body {
     list-style-type: none;
     width: fit-content;
     margin: auto;
-
-
 }
 
 .navbar--home{
     font-size: 3.125rem;
     text-decoration: underline;
 }
+
+.main,
+.cabin,
+.booking{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main__main,
+.booking__booking,
+.cabin__cabin{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    /* padding: 0 30px 0 30px; */
+}
+
+/* #endregion GLOBAL */
 
 /* #region HOME MAIN */
 .main-section {
@@ -158,6 +160,10 @@ body {
 
 .main--section{
     background-color: rgba(100, 94, 94, 0.45);
+}
+
+.main--background {
+    background-image: url(../assets/landingbackground.jpg);
 }
 
 .main-section-logo-container{
@@ -223,8 +229,6 @@ body {
     background-image: url(../assets/bedview.jpg);
 }
 
-
-
 .main-section-card__text{
 
     transform: translateY(-30px);
@@ -236,24 +240,15 @@ body {
 
 
 /* #region CABINS */
+
 .navbar--cabins{
     font-size: 3.125rem;
     text-decoration: underline;
 }
 
-.cabin__cabin {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    /* padding: 0 30px 0 30px; */
-}
 .cabin--background {
     background-image: url(../assets/fireplace.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
 }
 
 .cabin-gallery{
@@ -305,15 +300,6 @@ body {
     text-decoration: underline;
 }
 
-.booking__booking {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    /* padding: 0 30px 0 30px; */
-}
-
 .booking-fill{
     background-color: rgba(37, 37, 37, 0.429);
     grid-area: 1/1/8/-1;
@@ -332,9 +318,7 @@ body {
 
 .booking--background {
     background-image: url(../assets/bedview.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
 }
 
 .booking-search{
@@ -357,3 +341,112 @@ body {
     
 }
 /* #endregion BOOKING */
+
+
+
+@media only screen and (max-width: 600px){
+
+    li{
+        margin: 2px 0;
+    }
+.main-nav{
+    background-color: rgba(95, 95, 95, 0.678);
+    grid-area: 1/1/2/-1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+    
+    .main-nav__logo {
+        width: 15%;
+        height: 4rem;
+    }
+     
+    .main-nav--text {
+        writing-mode: horizontal-tb;
+        font-size: 44px;
+        transform: translateY(0.4375rem);
+    }
+
+    .main--background {
+        background-image: url(../assets/landingbackground.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .main-section {
+        grid-area: 3/1/-1/-1;
+        /* background-color: rgb(48, 48, 47); */
+        margin-top: 20px;
+
+    }
+
+    .main-section-logo-container{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main-section__logo{
+        width: 50%;
+        height: 50%;
+        transform: translateY(0);
+        
+    }
+    
+    .main-section-logo--text{
+        transform: translate(0);
+        font-size: 24px;
+    
+    }
+
+    .main-section-main-container{
+        width: 100%;
+        height: 70%;
+        display: flex;
+        gap: 0.5rem;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+       
+    }
+
+    .main--section{
+        background-color: rgba(49, 49, 49, 0.829);
+    }
+    
+    .main-section__card{
+        background-color: rgba(105, 105, 105, 0.6);
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+    
+    }
+    
+    .main-section-card-image{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 12.5rem;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.35);
+        transform: translateY(0);
+    
+    }
+    .main-section-card__text{
+
+        transform: translateY(0);
+        text-align: center;
+        padding: 1px;
+    }
+
+}
