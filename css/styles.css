@@ -247,7 +247,6 @@ body {
 
 /* #region CABINS */
 
-
 .navbar--cabins{
     font-size: 3.125rem;
     text-decoration: underline;
@@ -301,11 +300,14 @@ body {
 .cabin-details__text{
     width: 30%;
 }
+
 .cabin-info__text{
     width: 50%;
     text-align: center;
     line-height: 3rem;
 }
+
+/* #endregion CABINS */
 
 
 
