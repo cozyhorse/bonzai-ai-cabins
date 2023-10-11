@@ -192,8 +192,8 @@ body {
 
 .main-section__card{
     background-color: rgba(105, 105, 105, 0.6);
-    width: 300px;
-    height: 50%;
+    width: 50%;
+    height: 20rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -201,39 +201,26 @@ body {
 
 }
 
-.main-section-card__image-1{
-    background-image: url(../assets/fireplace.jpg);
+.main-section-card-image{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 55%;
+    height: 12.5rem;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.35);
     transform: translateY(-45px);
 
+}
 
+.main-section-card__image-1{
+    background-image: url(../assets/fireplace.jpg);
 }
 .main-section-card__image-2{
     background-image:url(../assets/livingroom.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height:55%;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.35);
-    transform: translateY(-45px);
 
 }
 .main-section-card__image-3{
     background-image: url(../assets/bedview.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height:55%;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.35);
-    transform: translateY(-45px);
-
 }
 
 
