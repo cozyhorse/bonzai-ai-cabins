@@ -8,38 +8,38 @@
 }
 
 /* #region GLOBAL */
-p{
+p {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.25rem;
     color: rgba(207, 207, 207, 1);
 }
 
-h2{
+h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.25rem;
     color: rgba(207, 207, 207, 1);
 }
 
-a{
+a {
     font-family: 'Cormorant Garamond', serif;
     font-size: 35px;
     color: rgba(207, 207, 207, 1);
     text-decoration: none;
 }
 
-li{
+li {
     margin: 15px 0;
 }
 
-li:hover{
+li:hover {
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
-label{
+label {
     color: rgba(207, 207, 207, 1);
     font-size: 0.875rem;
 }
@@ -47,7 +47,6 @@ label{
 body {
     max-width: 1920px;
     height: 100vh;
-    border: solid black 1px;
     margin: auto;
 }
 
@@ -64,9 +63,8 @@ body {
 }
 
 .main-nav__logo {
-    
     background-image: url(../assets/bonz.ai-logo.png);
-    width: 3rem;
+    width: 4rem;
     height: auto;
 }
 
@@ -74,36 +72,35 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    transform: translateY(7px);
 }
 
-
 .main-nav--text {
-    
     writing-mode: vertical-lr;
     text-orientation: upright;
     font-size: 30px;
 }
 
-.main-nav--text:hover{
-    cursor: pointer ;
+.main-nav--text:hover {
+    cursor: pointer;
 }
+
 /* NAVBAR AND ANIMATION */
-.main-navbar{
-    background-color: rgba(54, 54, 54, 0.8) ;
+.main-navbar {
+    background-color: rgba(54, 54, 54, 0.8);
     grid-area: 1/1/5/-1;
     z-index: 1;
     transform: translateY(-100%);
     transition: 600ms;
 }
 
-.main-navbar.show{
+.main-navbar.show {
     transform: translateY(0);
 }
 
-.main-nav.hide{
+.main-nav.hide {
     display: none;
 }
+
 /* NAVBAR AND ANIMATION */
 
 /* .main__navbar{
@@ -112,7 +109,7 @@ body {
     align-items: center;
 } */
 
-.exitbtn{
+.exitbtn {
     /* align-self:flex-start; */
     background: none;
     border: none;
@@ -121,21 +118,23 @@ body {
     color: rgba(207, 207, 207, 1);
 }
 
-.main-navbar__list{
+.main-navbar__list {
     text-align: center;
     list-style-type: none;
     width: fit-content;
     margin: auto;
 }
 
-.navbar--home{
+.navbar--home {
     font-size: 3.125rem;
     text-decoration: underline;
 }
 
 .main,
 .cabin,
-.booking{
+.booking {
+    width: 100vw;
+    height: 100vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -143,7 +142,7 @@ body {
 
 .main__main,
 .booking__booking,
-.cabin__cabin{
+.cabin__cabin {
     width: 100%;
     height: 100%;
     display: grid;
@@ -157,11 +156,12 @@ body {
 /* #region HOME MAIN */
 .main-section {
     grid-area: 3/3/-1/18;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
 }
 
-.main--section{
+.main--section {
     background-color: rgba(100, 94, 94, 0.45);
 }
 
@@ -169,69 +169,68 @@ body {
     background-image: url(../assets/landingbackground.jpg);
 }
 
-.main-section-logo-container{
-    max-width: 80%;
-    height: 30%;
+.main-section-logo-container {
+    /* background-color: rgb(114, 73, 120); */
+    grid-area: 1/1/3/-1;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    margin: auto;
-
+    justify-content: flex-start;
 }
 
-.main-section__logo{
-    width: 60vw;
-    height: auto;
-    transform: translateY(-7.5rem);
-}
-
-.main-section-logo--text{
-    transform: translate(3.25rem, -9.1875rem);
-    font-size: 24px;
-
-}
-
-.main-section-main-container{
+.main-section__logo {
     width: 100%;
-    height: 70%;
-    display: flex;
-    gap: 0.5rem;
-    padding: 10px;
-    justify-content: space-between;
+    height: 80%;
+   object-fit: scale-down;
+   aspect-ratio: 1;
+   
 }
 
-.main-section__card{
-    background-color: rgba(105, 105, 105, 0.6);
-    width: 50%;
-    height: fit-content ;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
+.main-section-logo--text {
+    font-size: 24px;
+    text-align: center;
 
 }
 
-.main-section-card-image{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 90%;
-    height: auto;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.35);
-    aspect-ratio: 1;
+.main-section-main-container {
+    /* background-color: rgb(204, 159, 247); */
+    grid-area: 3/1/-1/-1;
+    display: flex;
+}
+
+/* .main-section__card{
+    width: 100%;
+    height: 80%;
+    display: flex;
     
 
 }
 
-.main-section-card__image-1{
-    background-image: url(../assets/fireplace.jpg);
-}
-.main-section-card__image-2{
-    background-image:url(../assets/livingroom.jpg);
+.main-section-card-image{
+    width: 100%;
+    height: auto;
+    box-shadow: 7px 8px 5px 0px rgba(0, 0, 0, 0.75);
+} */
+
+.booking-search-result {
+    /* background-color: rgb(193, 250, 231); */
+    width: 100%;
+    height: 80%;
+    display: flex;
 
 }
-.main-section-card__image-3{
-    background-image: url(../assets/bedview.jpg);
+
+.main-section__card {
+    /* background-color: rgb(208, 176, 238); */
+    padding: 0.725rem;
+}
+
+
+
+.main-section__image {
+    width: 100%;
+    height: auto;
+    box-shadow: 7px 8px 5px 0px rgba(0, 0, 0, 0.75);
+
 }
 
 .main-section-card__text{
@@ -244,7 +243,7 @@ body {
 
 /* #region CABINS */
 
-.navbar--cabins{
+.navbar--cabins {
     font-size: 3.125rem;
     text-decoration: underline;
 }
@@ -254,29 +253,29 @@ body {
 
 }
 
-.cabin-gallery{
+.cabin-gallery {
     background-color: rgba(54, 54, 54, 0.85);
     grid-area: 1/1/6/-1;
-    display: flex ;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-.cabin-gallery__image{
+.cabin-gallery__image {
     width: 25%;
     height: auto;
 }
 
-.gallery__image{
+.gallery__image {
     width: 100%;
     height: 100%;
     object-fit: scale-down;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 
 }
 
-.cabin-info{
+.cabin-info {
     background-color: rgba(54, 54, 54, 0.8);
     grid-area: 8/1/-1/-1;
     display: flex;
@@ -284,11 +283,11 @@ body {
     justify-content: space-evenly;
 }
 
-.cabin-details__text{
+.cabin-details__text {
     width: 30%;
 }
 
-.cabin-info__text{
+.cabin-info__text {
     width: 50%;
     text-align: center;
     line-height: 3rem;
@@ -298,25 +297,25 @@ body {
 
 
 /* #region BOOKING */
-.navbar--booking{
+.navbar--booking {
     font-size: 3.125rem;
     text-decoration: underline;
 }
 
-.booking-fill{
+.booking-fill {
     background-color: rgba(37, 37, 37, 0.429);
     grid-area: 1/1/8/-1;
-    display: flex ;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-.booking-fill h2{
+.booking-fill h2 {
     font-size: 3rem;
     align-self: flex-end;
     transform: translateY(1.25rem);
-    
+
 }
 
 .booking--background {
@@ -324,167 +323,60 @@ body {
 
 }
 
-.booking-search{
+.booking-search {
     background-color: rgba(39, 39, 39, 0.7);
     grid-area: 8/1/-1/-1;
     padding: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
+
 }
 
-.booking-search__form{
+.booking-search__form {
     display: flex;
     gap: 1rem;
     justify-content: center;
     height: 5%;
-    
+
 }
 
-.booking-search__box{
+.booking-search__box {
     width: 80%;
-    
+
 }
 
-.booking-search-result{
+.booking-search-result {
     /* background-color: rgb(193, 250, 231); */
     width: 100%;
     height: 80%;
     display: flex;
-    
+
 }
 
-.booking-search-result__card{
+.booking-search-result__card {
     /* background-color: rgb(208, 176, 238); */
-    padding: 0.725rem;  
+    padding: 0.725rem;
 }
 
 
 
-.booking-search-result__image{
-   width: 100%;
-   height: auto;
-   box-shadow: 7px 8px 5px 0px rgba(0,0,0,0.75);
-   
+.booking-search-result__image {
+    width: 100%;
+    height: auto;
+    box-shadow: 7px 8px 5px 0px rgba(0, 0, 0, 0.75);
+
 }
 
-.result-card__text{
+.result-card__text {
     text-align: center;
 }
+
 /* #endregion BOOKING */
 
 
 /* #region MEDIA QUERY */
 @media only screen and (max-width: 600px){
-
-    li{
-        margin: 2px 0;
-    }
-.main-nav{
-    /* background-color: rgba(95, 95, 95, 0.678); */
-    grid-area: 1/1/2/-1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-    
-    .main-nav__logo {
-        width: 15%;
-        height: 4rem;
-    }
-     
-    .main-nav--text {
-        writing-mode: horizontal-tb;
-        font-size: 44px;
-        transform: translateY(0.4375rem);
-    }
-
-    .main--background {
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-    .main-section {
-        grid-area: 3/1/-1/-1;
-        /* margin-top: 20px; */
-
-    }
-
-    .main-section-logo-container{
-        /* background-color:rgb(210, 177, 241); */
-        width: 100%;
-        height: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: translateY(0.3125rem);
-    }
-    
-    .main-section__logo{
-        width: 50%;
-        height: 50%;
-        transform: translateY(0px);
-        
-    }
-    
-    .main-section-logo--text{
-        transform: translate(0);
-        font-size: 24px;
-    
-    }
-
-    .main-section-main-container{
-        width: 100%;
-        height: 70%;
-        display: flex;
-        gap: 0.5rem;
-        padding: 10px;
-        flex-direction: column;
-        align-items: center;
-        overflow: auto;
-       
-    }
-
-    .main--section{
-        background-color: rgba(49, 49, 49, 0.829);
-    }
-    
-    .main-section__card{
-        background-color: rgba(105, 105, 105, 0.6);
-        width: 100%;
-        height: fit-content;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 10px;
-    
-    }
-    
-    .main-section-card-image{
-    
-        width: 100%;
-        height: auto;;
-        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.35);
-
-    
-    }
-    .main-section-card__text{
-        text-align: center;
-        padding: 1px;
-    }
-
-}
-
-@media only screen and (min-width: 1700px){
-    .main-section-logo-container{
-        transform: translateY(-3vh);
-    }
 
 }
 
