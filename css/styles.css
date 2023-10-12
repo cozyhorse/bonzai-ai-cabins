@@ -346,7 +346,7 @@ body {
     
 }
 
-.booking-search-resault{
+.booking-search-result{
     /* background-color: rgb(193, 250, 231); */
     width: 100%;
     height: 80%;
@@ -354,20 +354,21 @@ body {
     
 }
 
-.booking-search-resault__card{
+.booking-search-result__card{
     /* background-color: rgb(208, 176, 238); */
     padding: 0.725rem;  
 }
 
 
 
-.booking-search-resault__image{
+.booking-search-result__image{
    width: 100%;
-   height: 100%;
+   height: auto;
    box-shadow: 7px 8px 5px 0px rgba(0,0,0,0.75);
+   
 }
 
-.resault-card__text{
+.result-card__text{
     text-align: center;
 }
 /* #endregion BOOKING */
