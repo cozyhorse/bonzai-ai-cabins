@@ -327,23 +327,51 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     
 }
 
 .booking-search__form{
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    height: 5%;
+    
 }
 
 .booking-search__box{
     width: 80%;
     
 }
+
+.booking-search-resault{
+    /* background-color: rgb(193, 250, 231); */
+    width: 100%;
+    height: 80%;
+    display: flex;
+    
+}
+
+.booking-search-resault__card{
+    /* background-color: rgb(208, 176, 238); */
+    padding: 0.725rem;
+    
+    
+}
+
+.booking-search-resault__image{
+   width: 100%;
+   box-shadow: 7px 8px 5px 0px rgba(0,0,0,0.75);
+ 
+}
+
+.resault-card__text{
+    text-align: center;
+}
 /* #endregion BOOKING */
 
 
-
+/* #region MEDIA QUERY */
 @media only screen and (max-width: 600px){
 
     li{
@@ -450,3 +478,5 @@ body {
     }
 
 }
+
+/* #endregion MEDIA QUERY */
