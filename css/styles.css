@@ -354,15 +354,14 @@ body {
 
 .booking-search-resault__card{
     /* background-color: rgb(208, 176, 238); */
-    padding: 0.725rem;
-    
-    
+    padding: 0.725rem;  
 }
+
+
 
 .booking-search-resault__image{
    width: 100%;
    box-shadow: 7px 8px 5px 0px rgba(0,0,0,0.75);
- 
 }
 
 .resault-card__text{
