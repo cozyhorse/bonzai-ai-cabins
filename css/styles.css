@@ -235,6 +235,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 
@@ -252,7 +253,6 @@ body {
     transform: scale(1.05);
     transition: 400ms;
 }
-
 
 
 .main-section__image {
@@ -306,12 +306,14 @@ body {
     gap: 1rem;
     padding: 58px;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .cabin-gallery__image {
     flex: 0.3 0 250px;
     width: 25%;
     height: auto;
+    
 }
 
 .gallery__image {
@@ -329,6 +331,7 @@ body {
     padding: 1.4375rem;
     justify-content: space-evenly;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .cabin-details__text {
@@ -428,7 +431,10 @@ body {
 
 
 /* #region MEDIA QUERY */
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 600px){
+    body{
+        max-width: 600px;
+    }
 
 
     .main-section-logo-container{
@@ -465,11 +471,28 @@ body {
     }
 
     .main-section-main-container{
-        grid-area: 1/1/-1/-1 ;
+        grid-area: 1/1/-1/7;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .main-section__card {
+        padding: 60px 60px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .main-section-card__text{
         padding: 20px;
+    }
+
+    .main-section__icon {
+        padding: 25px 49px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .cabin-info{
@@ -487,5 +510,7 @@ body {
 
 
 }
+
+
 
 /* #endregion MEDIA QUERY */
