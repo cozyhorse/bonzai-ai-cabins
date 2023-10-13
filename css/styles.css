@@ -72,6 +72,13 @@ body {
     z-index: 1;
 }
 
+.main-nav--text,
+.main-nav--logo:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+
 .main,
 .cabin,
 .booking {
@@ -104,9 +111,9 @@ body {
     font-size: 30px;
 }
 
-.main-nav--text:hover {
+/* .main-nav--text:hover {
     cursor: pointer;
-}
+} */
 
 /* NAVBAR AND ANIMATION */
 .main-navbar {
@@ -208,13 +215,18 @@ body {
 
 
 .main-section__card {
-    flex: 0 0 400px;
+    flex: 0 0 430px;
     /* background-color: rgb(208, 176, 238); */
     padding: 0.725rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.9375rem;
+}
+
+.main-section__card:hover{
+    transform: scale(1.05);
+    transition: 400ms;
 }
 
 
