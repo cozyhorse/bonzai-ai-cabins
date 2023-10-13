@@ -50,6 +50,16 @@ body {
     margin: auto;
 }
 
+.main__main,
+.booking__booking,
+.cabin__cabin {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    /* padding: 0 30px 0 30px; */
+}
 
 
 .main-nav {
@@ -60,6 +70,16 @@ body {
     padding: 1.4rem;
     line-height: 0.3125rem;
     z-index: 1;
+}
+
+.main,
+.cabin,
+.booking {
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .logo-outside{
@@ -130,26 +150,9 @@ body {
     text-decoration: underline;
 }
 
-.main,
-.cabin,
-.booking {
-    width: 100vw;
-    height: 100vh;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-.main__main,
-.booking__booking,
-.cabin__cabin {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    /* padding: 0 30px 0 30px; */
-}
+
+
 
 /* #endregion GLOBAL */
 
@@ -389,7 +392,63 @@ body {
 
 
 /* #region MEDIA QUERY */
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 360px){
+
+
+    .main-section-logo-container{
+        visibility: hidden;
+    }
+
+    .logo-outside{
+        visibility: visible;
+        z-index: 1;
+
+    }
+
+    .logo-outside p {
+        font-size: 1.25rem;
+    }
+
+    .main-nav{
+        grid-area: 3/1/3/-1;
+        gap: 1rem;
+        
+    }
+
+    .main-nav--text{
+        writing-mode: horizontal-tb;
+        align-self: center;
+        font-size: 2.8125rem;
+    }
+
+    .main-section {
+        grid-area: 4/1/-1/-1 ;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+
+    }
+
+    .main-section-main-container{
+        grid-area: 1/1/-1/-1 ;
+    }
+
+    .main-section-card__text{
+        padding: 15px;
+    }
+
+    .cabin-info{
+        grid-area: 4/1/8/-1;
+    }
+
+    .cabin-gallery{
+        grid-area: 8/1/-1/-1;
+    }
+
+    .booking-fill h2{
+        font-size: 2rem;
+        transform: translateY(0);
+    }
+
 
 }
 
