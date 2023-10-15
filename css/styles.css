@@ -32,6 +32,14 @@
   /* #endregion SCROLL */
 
 /* #region GLOBAL */
+
+body {
+    max-width: 1920px;
+    height: 100vh;
+    margin: auto;
+}
+
+
 p {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.25rem;
@@ -68,11 +76,6 @@ label {
     font-size: 0.875rem;
 }
 
-body {
-    max-width: 1920px;
-    height: 100vh;
-    margin: auto;
-}
 
 .main__main,
 .booking__booking,
