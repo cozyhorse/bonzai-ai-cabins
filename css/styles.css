@@ -231,7 +231,7 @@ label {
 
 .main-section-main-container {
     /* background-color: rgb(204, 159, 247); */
-    grid-area: 3/1/-1/-1;
+    grid-area: 3/2/-1/-1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
